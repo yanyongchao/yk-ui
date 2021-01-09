@@ -10,4 +10,5 @@ declare module "*.md" {
   export default comp;
 }
 
+declare type ComponentSize = 'large' | 'normal' | 'small'
 

@@ -51,6 +51,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new MiniCssExtrackPlugin({
+      filename: 'css/[name].css'
+    }),
     new ProgressBarPlugin(),
     new VueLoaderPlugin()
   ]

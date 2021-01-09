@@ -1,6 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <yt-button type="normal" size="small">aa</yt-button>
 </template>
 
 <script lang="ts">

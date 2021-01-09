@@ -1,0 +1,90 @@
+@import '../../styles/var';
+@import '../../styles/animation';
+
+.yt-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+  }
+  &--primary {
+    border-color: $primary-color;
+    background-color: $primary-color;
+    color: $white;
+  }
+  &--normal {
+    border-color: $primary-color;
+    background-color: $white;
+    color: $primary-color;
+  }
+  &--danger {
+    border-color: $danger-color;
+    background-color: $danger-color;
+    color: $white;
+  }
+  &--large {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    line-height: 45px;
+    font-size: $size-16;
+  }
+  &--normal {
+    height: 44px;
+    padding: 0 15px;
+    line-height: 44px;
+    border-radius: 4px;
+    font-size: $size-14;
+  }
+  &--small {
+    height: 30px;
+    padding: 0 8px;
+    border-radius: 5px;
+    font-size: $size-13;
+  }
+  &-loading-circle {
+    display: inline-block;
+    width: $size-14;
+    height: $size-14;
+    margin-right: 5px;
+    padding-right: 5px;
+    svg {
+      width: inherit;
+      height: inherit;
+      vertical-align: top;
+      opacity: 1;
+      animation: rotate .8s linear infinite;
+      animation-duration: 2s;
+      circle {
+        stroke: currentColor;
+        stroke-width: 4;
+        stroke-linecap: round;
+        animation: circular 1.5s ease-in-out infinite;
+      }
+    }
+  }
+  &--large &-loading-circle {
+    width: $size-17;
+    height: $size-17;
+  }
+  &.is-disabled {
+    opacity: .6;
+  }
+}

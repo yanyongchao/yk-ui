@@ -1,0 +1,17 @@
+@import './mixins/ellipsis';
+
+.yt-overflow-hidden {
+  overflow: hidden;
+}
+
+.yt-ellipsis {
+  @include ellipsis();
+}
+
+.yt-multi-ellipsis--l2 {
+  @include multi-ellipsis(2);
+}
+
+.yt-multi-ellipsis--l3 {
+  @include multi-ellipsis(3);
+}

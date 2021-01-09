@@ -1,10 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import { Button } from '../../lib/main.js'
-import './index.css'
-
-const arr: Array<number> = [1]
+import ytui from '../../packages'
 
 createApp(App)
-  // .use(Button)
+  .use(ytui)
   .mount('#app')
